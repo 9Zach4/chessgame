@@ -1,7 +1,7 @@
 const App = () => (
   
-    <div className="flex justify-center bg-black">
-      <h1 className="text-white">ChessGame</h1>
+    <div className="flex justify-center bg-black py-5">
+      <h1 className="text-white text-xl font-bold">Chess Game</h1>
     </div>
     
 )
