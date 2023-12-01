@@ -1,5 +1,5 @@
 import React from "react"
-import { chessGrid, piece } from "./data"
+import { chessGrid } from "./data"
 
 
 const chessBoard = () => (
@@ -12,7 +12,7 @@ const chessBoard = () => (
           <div
             key={col}
             className={`h-12 w-12 ${(rowIndex+colIndex) % 2 === 0 ? "bg-white" : "bg-black"}`}
-          >{piece}</div>
+          ></div>
         ))}
       </div>
     ))}
