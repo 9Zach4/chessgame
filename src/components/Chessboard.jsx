@@ -2,7 +2,7 @@ import React from "react"
 import { chessGrid, piece } from "./data"
 
 
-const ChessBoard = () => (
+const chessBoard = () => (
   <div className="border p-5 border-dashed border-white border-4">
    <div className="border border-solid border-black border-1">
    <div className="grid grid-cols-16">
@@ -21,4 +21,4 @@ const ChessBoard = () => (
     </div>
 )
 
-export default ChessBoard
+export default chessBoard
