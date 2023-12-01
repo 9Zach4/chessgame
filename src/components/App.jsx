@@ -1,12 +1,12 @@
 import React from "react"
-import Chessboard from "./Chessboard"
+import Chessboard from "./chessboard"
 
 const App = () => (
-  <div>
-    <div className="flex justify-center bg-black py-5">
-      <h1 className="text-white text-xl font-bold">Chess Game</h1>
+  <div className="h-screen bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+    <div className="flex justify-center py-5">
+      <h1 className="text-white text-3xl font-bold">CHESSGAME</h1>
     </div>
-    <div className="flex justify-center m-5 bg-black py-5 bg-orange-500	">
+    <div className="flex justify-center p-7">
         <Chessboard /> 
     </div>
   </div>
