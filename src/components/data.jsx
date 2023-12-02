@@ -10,6 +10,5 @@
   ["1", "2", "3", "4", "5", "6", "7", "8"],
 ]
 
-export const piece = [
+export const chessPiece = [ "king", "queen", "bishop", "knight", "rook", "pawn" ]
   
-]
