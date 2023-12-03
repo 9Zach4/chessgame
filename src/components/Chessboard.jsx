@@ -1,26 +1,28 @@
 import React from "react"
-import { chessGrid } from "./data"
+import { chessGrid, chessPiece } from "./data"
 
-
-// Const imgHorse = () => (
-  
-//   <img src="black_queen.svg" alt="Black Pawn" className="h-12 w-12" />
-  
-  
-// )
-const chessBoard = () => (
-
+const ChessBoard = () => (
   <div className="border p-5 border-dashed border-white border-4">
     <div className="border border-solid border-black border-1">
-      <div className="grid grid-cols-16">
+      <div className="grid grid-cols-8">
         {chessGrid.map((row, rowIndex) => (
-          <div key={rowIndex} className="flex">
+          <div key={rowIndex}>
             {row.map((col, colIndex) => (
               <div
                 key={col}
-                className={`h-12 w-12 ${(rowIndex + colIndex) % 2 === 0 ? "bg-pink-500" : "bg-violet-800"}`}
-              >
-                {/* {imgHorse()} */}
+                className={`h-12 w-12 ${
+                  (rowIndex + colIndex) % 2 === 0 ? "bg-pink-500" : "bg-violet-800"
+                }`}>
+                
+             {rowIndex <= 0 && colIndex <= 0 &&
+              chessPiece
+                 .filter((piece) => piece.id <=10  && piece.color === "black")
+                  .map((piece, pieceIndex) => (
+              
+            <img key={pieceIndex} src={piece.img} alt={piece.type} className="h-12 w-12" />
+            ))
+            }          
+
               </div>
             ))}
           </div>
@@ -30,4 +32,4 @@ const chessBoard = () => (
   </div>
 )
 
-export default chessBoard
+export default ChessBoard
